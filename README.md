@@ -1,2 +1,2 @@
 # sort-visualization
-Visualize step-by-step sorting algorithms using Pygame.
+Visualize the process of sorting algorithms using Pygame.
