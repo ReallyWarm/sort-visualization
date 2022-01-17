@@ -34,6 +34,8 @@ def Insertion(drawAll, bar, arr):
                     setArr(arr, bar, j + 1, temp)
 
                     checkInterrupt()
+                
+                bar[-1].bar_done()
 
             else:
                 done = True
