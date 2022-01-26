@@ -1,7 +1,7 @@
 import pygame
 import sys
 from visualize import *
-from algorithm import Bubble, Shell, Merge, Insertion
+from algorithm import Bubble, Shell, Merge, Insertion, Quick
 
 pygame.init()
 clock = pygame.time.Clock()
@@ -12,7 +12,7 @@ pygame.display.set_caption("Sorting Algorithm")
 ResetButton = Button(5, 10, 60, 30, [B_COLOR, B_HOVER], "RESET", 15)
 
 AlgDrop = Dropdown(75, 10, 120, 30, [DROP_COLOR, DROP_HOVER], [B_COLOR, B_HOVER],
-                "Algorithm", ["Bubble Sort", "Insertion Sort", "Shell Sort", "Merge Sort"], 15)
+                "Algorithm", ["Bubble Sort", "Insertion Sort", "Shell Sort", "Merge Sort", "Quick Sort"], 15)
 
 StartButton = Button(205, 10, 60, 30, [B_COLOR, B_HOVER], "START", 15)
 
@@ -111,6 +111,8 @@ def main():
                 Shell(lambda: drawAll(SCREEN, bar, mouse), bar, arr)
             if Algorithm == 3:
                 Merge(lambda: drawAll(SCREEN, bar, mouse), bar, arr)
+            if Algorithm == 4:
+                Quick(lambda: drawAll(SCREEN, bar, mouse), bar, arr)
 
     pygame.quit()
     sys.exit()
