@@ -28,25 +28,32 @@ def sort(drawAll, bar, arr, start, mid, end):
     # Keep merged and sorted array to temp[]
     while i < mid and j < end:
         if arr[i] > arr[j]:
+            bar[j].bar_mark()
             temp[k] = arr[j]
             j += 1
 
         else:
+            bar[i].bar_mark()
             temp[k] = arr[i]
             i += 1
 
         k += 1
+        drawAll()
 
     # Copy any elements left 
     while i < mid:
+        bar[i].bar_mark()
         temp[k] = arr[i]
         i += 1
         k += 1
+        drawAll()
 
     while j < end:
+        bar[j].bar_mark()
         temp[k] = arr[j]
         j += 1
         k += 1
+        drawAll()
 
     # Output sorted array
     for i in range(end - start):
