@@ -58,17 +58,11 @@ def main():
 
             if pygame.mouse.get_pressed()[0]:
                 pass
-                # g = findBar(bar, 4)
-                # setBar(arr, bar, g, arr[g+1])
 
             if pygame.mouse.get_pressed()[2]:
-                print(arr)
-                print(bar)
-                temp = arr[0]
-                setArr(arr, bar, 0, arr[1])
-                setArr(arr, bar, 1, temp)
-                print(arr)
-                print(bar)
+                pass
+                print(len(arr))
+                print(len(bar))
 
             if event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_1:
